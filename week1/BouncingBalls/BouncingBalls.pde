@@ -1,6 +1,13 @@
-Ball ball;
+Ball ball;   //need to use the 'class' function to define the ball class
+
+//create constructor for ball in ball class
+
+//draw your ball with ellipse()
 
 Ball [] balls = new Ball[100];
+
+
+//your setup bit looks good
 
 void setup() {
   size(500, 500);
@@ -14,6 +21,8 @@ void setup() {
   }
 }
 
+
+// draw part looks right too
 void draw() {
   //background(0);
 
