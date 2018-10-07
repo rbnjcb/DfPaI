@@ -7,7 +7,7 @@ class Ball {
   Ball( float x, float y, float _radius) {
     pos = new PVector(x, y);
     vel = new PVector(random(-3, 3), random(-3, 3));
-    radius = _radius;//better way to do this
+    radius = _radius;//better way to do this ??
   }
 
   void update() {
