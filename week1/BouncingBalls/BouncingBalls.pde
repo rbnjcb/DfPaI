@@ -4,7 +4,7 @@ class Ball {
   float x;
   float y;
 
-  Ball( float x, float y, float _radius) {
+  Ball (float x, float y, float _radius) {
     pos = new PVector(x, y);
     vel = new PVector(random(-3, 3), random(-3, 3));
     radius = _radius;//better way to do this ??
@@ -13,18 +13,17 @@ class Ball {
   void update() {
 
     pos.add(vel);
-    println(vel);
 
-    if (pos.x < radius || pos.x < width - radius) {
+    if (pos.x < radius || pos.x > width - radius) {
       pos.x *= -1;
     }
-    if (pos.y < radius || pos.y < height - radius) {
+    if (pos.y < radius || pos.y > height - radius) {
       vel.y *= -1;
     }
   }
 
   void draw() {
-    ellipse(pos.x, pos.x, radius * 2, radius);
+    ellipse(pos.x, pos.y, radius, radius);
   }
 }
 
